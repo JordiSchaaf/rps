@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock paper scissors</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+  </head>
+  <body onload="openModal()">
+    <section>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <h1 class="title">Rock Paper Scissors</h1>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <p>
+              Score: <span id="score">0</span>
+            </p>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="game">
+          <h1 class="subtitle is-4 has-text-centered" id="player"></h1>
+          <div class="player">
+            <a class="option" href="javascript:compare(0)">
+              <i class="far fa-hand-rock fa-10x"></i>
+            </a>
+            <a class="option" href="javascript:compare(1)">
+              <i class="far fa-hand-paper fa-10x"></i>
+            </a>
+            <a class="option" href="javascript:compare(2)">
+              <i class="far fa-hand-scissors fa-10x"></i>
+            </a>
+          </div>
+          <div class="separator">
+            <h1 class="subtitle is-4 has-text-centered" id="result">
+              VS
+            </h1>
+          </div>
+          <div class="bot">
+            <div id="bot">
+              <i class="fas fa-question fa-10x"></i>
+            </div>
+          </div>
+          <h1 class="subtitle is-4 has-text-centered">Bot</h1>
+        </div>
+
+      </div>
+      <div class="modal" id="namePrompt">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <h1 class="title is-1">Welcome</h1>
+            <h2 class="subtitle is-6 has-text-grey-light">to Rock Paper Scissors</h2>
+            <p>Enter your name to play:</p>
+            <div class="field is-grouped">
+              <div class="control field has-addons">
+                <p class="control">
+                  <input class="input" type="text" id="playerName">
+                </p>
+                <p class="control">
+                  <button class="button is-success" onclick="startGame(false)">Play</button>
+                </p>
+              </div>
+              <p class="controlSpacer">or</p>
+              <p class="control">
+                <button class="button is-light" onclick="startGame(true)">Play as guest</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer>
+
+  </footer>
+  <script src="assets/js/game.js" language="javascript" type="text/javascript"></script>
+</html>
