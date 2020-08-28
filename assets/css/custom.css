@@ -19,12 +19,20 @@ section {
   justify-content: center;
   align-items: center;
 }
+#scoreField {
+  height: 2rem;
+  margin-bottom: 2rem;
+}
+#score {
+  color: #e60000;
+}
 .game {
   display: flex;
   flex-direction: column;
 }
 #player {
   margin-bottom: 0;
+  height: 2rem;
 }
 .player {
   display: flex;
@@ -39,6 +47,12 @@ section {
   padding: 1rem;
   margin: 0 .5rem;
   color: #e60000;
+}
+nav {
+  margin-top: -1rem;
+}
+.breadcrumb a {
+  color: #000000;
 }
 a:hover {
   color: #e60000;
@@ -65,4 +79,10 @@ a:hover {
   flex: 1;
   border-bottom: 1px solid #dbdbdb;
   margin: 0 2.5rem;
+}
+.fa-times-circle {
+  color: #e60000;
+}
+.fa-check-circle {
+  color: #23d160;
 }
